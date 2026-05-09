@@ -1,0 +1,15 @@
+{
+  "name": "quadribuilders",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "concurrently \"pnpm --filter client dev\" \"pnpm --filter server dev\"",
+    "build": "pnpm --filter client build",
+    "start": "pnpm --filter server start",
+    "seed": "pnpm --filter server seed",
+    "lint": "pnpm --filter client lint"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
