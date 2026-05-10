@@ -31,7 +31,7 @@ export default function CTABanner() {
               { n: '03', title: 'Build & Deliver', body: 'We execute to spec, keeping you informed at every milestone.' },
             ].map(({ n, title, body }) => (
               <div key={n} className="flex gap-5">
-                <span className="font-display text-5xl font-semibold text-border">{n}</span>
+                <span className="font-display text-5xl font-semibold text-[var(--color-text-secondary)] opacity-60">{n}</span>
                 <div>
                   <h4 className="font-display text-lg font-semibold mb-2">{title}</h4>
                   <p className="text-sm text-[var(--color-text-secondary)] leading-relaxed">{body}</p>
