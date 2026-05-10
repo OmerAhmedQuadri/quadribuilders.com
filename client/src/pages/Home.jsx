@@ -10,7 +10,7 @@ import { useSiteConfig } from '../hooks/useSiteConfig.js';
 
 function WhyUs() {
   const points = [
-    { value: '15+', label: 'Years', body: 'Deep roots in Hyderabad's construction landscape, with relationships and knowledge no new entrant can replicate.' },
+    { value: '15+', label: 'Years', body: "Deep roots in Hyderabad's construction landscape, with relationships and knowledge no new entrant can replicate." },
     { value: '100%', label: 'Transparency', body: 'Every rupee, every milestone, every decision is documented and shared with you in real time.' },
     { value: 'Zero', label: 'Compromises', body: 'We use Grade-A materials and follow IS code specifications on every project — residential or commercial.' },
   ];

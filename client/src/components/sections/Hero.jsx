@@ -21,17 +21,8 @@ export default function Hero({ config }) {
       {/* Content */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20">
         <div className="max-w-4xl">
-          <motion.p
-            className="section-label mb-6"
-            initial={{ opacity: 0, y: 16 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-          >
-            {config?.companyName || 'QuadriBuilders'}
-          </motion.p>
-
           <h1 className="font-display text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-semibold leading-[1.05] mb-8">
-            <AnimatedText text={hero.headline || "Building Tomorrow's Landmarks"} delay={0.1} />
+            <AnimatedText text={hero.headline || "Building Your Tomorrow"} delay={0.1} />
           </h1>
 
           <motion.p

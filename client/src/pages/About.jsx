@@ -16,7 +16,7 @@ export default function About() {
   return (
     <PageWrapper>
       {/* Hero */}
-      <section className="pt-32 pb-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="pt-36 pb-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <ScrollReveal>
           <p className="section-label mb-6">Our Story</p>
           <h1 className="section-title max-w-3xl mb-8">

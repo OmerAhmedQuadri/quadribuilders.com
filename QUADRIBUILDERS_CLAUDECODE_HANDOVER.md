@@ -483,8 +483,8 @@ GET/POST/PUT/DELETE /api/admin/testimonials
   --color-border: #222222;
   --color-text-primary: #f5f5f0; /* warm white */
   --color-text-secondary: #888880;
-  --color-accent: #C8A96E;       /* architectural gold */
-  --color-accent-hover: #E2C48A;
+  --color-accent: #ffbd59;       /* architectural gold */
+  --color-accent-hover: #ffd080;
   --color-danger: #E53E3E;
   --color-success: #38A169;
 }
@@ -531,7 +531,7 @@ const staggerContainer = {
 theme: {
   extend: {
     colors: {
-      accent: '#C8A96E',
+      accent: '#ffbd59',
       surface: '#111111',
     },
     fontFamily: {
@@ -720,7 +720,7 @@ Build this project in this exact order:
 **Design rules to follow:**
 - Dark theme only (`#0a0a0a` background)
 - Font: Cormorant Garamond for headings, DM Sans for body
-- Accent color: `#C8A96E` (gold) for CTAs, highlights, borders
+- Accent color: `#ffbd59` (gold) for CTAs, highlights, borders
 - NO purple gradients, NO Inter font, NO generic layouts
 - Every section should feel architectural — bold type, strong grid, intentional whitespace
 - Framer Motion on: page load hero, scroll reveals, counter animations, form success states, project card hovers

@@ -4,8 +4,8 @@ export default {
   theme: {
     extend: {
       colors: {
-        accent:  '#C8A96E',
-        'accent-hover': '#E2C48A',
+        accent:  '#ffbd59',
+        'accent-hover': '#ffd080',
         surface: '#111111',
         border:  '#222222',
         danger:  '#E53E3E',

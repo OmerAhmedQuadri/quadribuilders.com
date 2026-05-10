@@ -30,7 +30,7 @@ export default function Projects() {
 
   return (
     <PageWrapper>
-      <div className="pt-28 pb-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="pt-36 pb-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <ScrollReveal className="mb-12">
           <p className="section-label mb-4">Our Work</p>
           <h1 className="section-title mb-8">Projects</h1>

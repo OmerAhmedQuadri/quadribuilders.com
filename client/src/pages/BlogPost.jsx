@@ -25,7 +25,7 @@ export default function BlogPost() {
 
   return (
     <PageWrapper>
-      <div className="pt-28 pb-24 max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="pt-36 pb-24 max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
         <Link to="/blog" className="inline-flex items-center gap-2 text-sm text-[var(--color-text-secondary)] hover:text-accent transition-colors mb-8">
           <ArrowLeft size={14} /> Back to Blog
         </Link>

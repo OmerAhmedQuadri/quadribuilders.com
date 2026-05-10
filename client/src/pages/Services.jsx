@@ -46,7 +46,7 @@ const services = [
 export default function Services() {
   return (
     <PageWrapper>
-      <div className="pt-32 pb-8 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="pt-36 pb-8 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <ScrollReveal>
           <p className="section-label mb-4">Services</p>
           <h1 className="section-title mb-4">What We Build</h1>

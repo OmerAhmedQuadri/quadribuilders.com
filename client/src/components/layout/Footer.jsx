@@ -19,10 +19,14 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
           {/* Brand */}
           <div>
-            <img src="/logo.png" alt={config?.companyName} className="h-9 w-auto mb-4" />
-            <p className="text-sm text-[var(--color-text-secondary)] leading-relaxed max-w-xs">
-              {config?.tagline || 'Engineering Excellence. Architectural Vision.'}
-            </p>
+            <Link to="/" className="inline-block mb-4">
+              <p className="font-display text-2xl font-semibold text-[var(--color-text-primary)] leading-tight">
+                {config?.companyName || 'Quadri Builders'}
+              </p>
+              <p className="text-xs tracking-widest uppercase text-accent mt-1">
+                {config?.tagline || 'Engineering Excellence. Architectural Vision.'}
+              </p>
+            </Link>
             <div className="flex gap-4 mt-6">
               {config?.social?.instagram && (
                 <a href={config.social.instagram} target="_blank" rel="noopener noreferrer" className="text-[var(--color-text-secondary)] hover:text-accent transition-colors">

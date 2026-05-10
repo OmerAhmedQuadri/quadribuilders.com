@@ -30,7 +30,7 @@ export default function ProjectDetail() {
 
   return (
     <PageWrapper>
-      <div className="pt-28 pb-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="pt-36 pb-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <Link to="/projects" className="inline-flex items-center gap-2 text-sm text-[var(--color-text-secondary)] hover:text-accent transition-colors mb-8">
           <ArrowLeft size={14} /> Back to Projects
         </Link>
@@ -80,7 +80,7 @@ export default function ProjectDetail() {
 
           {/* Sidebar form */}
           <div>
-            <div className="bg-surface border border-border p-6 sticky top-24">
+            <div className="bg-surface border border-border p-6 sticky top-28">
               <h3 className="font-display text-xl font-semibold mb-1">Enquire About This Project</h3>
               <p className="text-xs text-[var(--color-text-secondary)] mb-6">Our team will get back to you within 24 hours.</p>
               <EnquiryForm projectId={project._id} projectTitle={project.title} />

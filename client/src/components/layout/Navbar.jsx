@@ -42,10 +42,10 @@ export default function Navbar() {
         transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between h-16 md:h-20">
+          <div className="flex items-center justify-between h-20 md:h-24">
             {/* Logo */}
             <Link to="/" className="flex-shrink-0">
-              <img src="/logo.png" alt={config?.companyName || 'QuadriBuilders'} className="h-8 md:h-10 w-auto" />
+              <img src="/logo.png" alt={config?.companyName || 'QuadriBuilders'} className="h-12 md:h-16 w-auto" />
             </Link>
 
             {/* Desktop Nav */}
@@ -56,7 +56,7 @@ export default function Navbar() {
                   to={to}
                   end={to === '/'}
                   className={({ isActive }) =>
-                    `text-sm font-medium tracking-wide transition-colors duration-200 ${
+                    `text-[15px] font-medium tracking-widest uppercase transition-colors duration-200 ${
                       isActive ? 'text-accent' : 'text-[var(--color-text-secondary)] hover:text-[var(--color-text-primary)]'
                     }`
                   }
