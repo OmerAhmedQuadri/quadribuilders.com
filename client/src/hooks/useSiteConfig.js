@@ -8,5 +8,5 @@ export const useSiteConfig = () => {
     queryFn: () => api.get('/config').then((r) => r.data),
     staleTime: 10 * 60 * 1000,
   });
-  return { config: data || fallbackConfig, isLoading, error };
+  return { config: data ? { ...fallbackConfig, ...data } : fallbackConfig, isLoading, error };
 };

@@ -17,7 +17,16 @@ import adminRoutes        from './routes/admin.routes.js';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const app = express();
-const PORT = process.env.PORT || 5000;
+const flagIdx = process.argv.indexOf('--port');
+const cliPort = flagIdx !== -1 ? process.argv[flagIdx + 1] : null;
+let PORT;
+if (cliPort) {
+  PORT = Number(cliPort);
+} else {
+  const envPort = process.env.PORT || 5000;
+  console.log(`Port was missing in command, falling back to PORT ${envPort} from .env`);
+  PORT = Number(envPort);
+}
 
 connectDB();
 

@@ -9,8 +9,6 @@ const Home          = lazy(() => import('./pages/Home.jsx'));
 const Projects      = lazy(() => import('./pages/Projects.jsx'));
 const ProjectDetail = lazy(() => import('./pages/ProjectDetail.jsx'));
 const Services      = lazy(() => import('./pages/Services.jsx'));
-const Blog          = lazy(() => import('./pages/Blog.jsx'));
-const BlogPost      = lazy(() => import('./pages/BlogPost.jsx'));
 const About         = lazy(() => import('./pages/About.jsx'));
 const Contact       = lazy(() => import('./pages/Contact.jsx'));
 
@@ -22,8 +20,6 @@ const PUBLIC_ROUTES = [
   { path: '/projects',        element: <Projects /> },
   { path: '/projects/:slug',  element: <ProjectDetail /> },
   { path: '/services',        element: <Services /> },
-  { path: '/blog',            element: <Blog /> },
-  { path: '/blog/:slug',      element: <BlogPost /> },
   { path: '/about',           element: <About /> },
   { path: '/contact',         element: <Contact /> },
 ];

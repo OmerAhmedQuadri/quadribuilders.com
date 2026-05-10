@@ -8,17 +8,13 @@ import CTABanner from '../components/sections/CTABanner.jsx';
 import ScrollReveal from '../components/ui/ScrollReveal.jsx';
 import { useSiteConfig } from '../hooks/useSiteConfig.js';
 
-function WhyUs() {
-  const points = [
-    { value: '15+', label: 'Years', body: "Deep roots in Hyderabad's construction landscape, with relationships and knowledge no new entrant can replicate." },
-    { value: '100%', label: 'Transparency', body: 'Every rupee, every milestone, every decision is documented and shared with you in real time.' },
-    { value: 'Zero', label: 'Compromises', body: 'We use Grade-A materials and follow IS code specifications on every project — residential or commercial.' },
-  ];
+function WhyUs({ whyUs }) {
+  const { sectionLabel, title, points } = whyUs;
   return (
     <section className="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <ScrollReveal className="mb-16">
-        <p className="section-label mb-4">Why QuadriBuilders</p>
-        <h2 className="section-title max-w-lg">The Standard Others Are Measured Against</h2>
+        <p className="section-label mb-4">{sectionLabel}</p>
+        <h2 className="section-title max-w-lg">{title}</h2>
       </ScrollReveal>
       <div className="grid md:grid-cols-3 gap-12">
         {points.map(({ value, label, body }, i) => (
@@ -43,7 +39,7 @@ export default function Home() {
       <Stats stats={config?.stats} />
       <ServicesGrid />
       <FeaturedProjects />
-      <WhyUs />
+      <WhyUs whyUs={config.whyUs} />
       <Testimonials />
       <CTABanner />
     </PageWrapper>

@@ -20,7 +20,7 @@ export default function About() {
         <ScrollReveal>
           <p className="section-label mb-6">Our Story</p>
           <h1 className="section-title max-w-3xl mb-8">
-            Building Hyderabad's Skyline for Over 15 Years
+            {config?.about?.heroTitle}
           </h1>
           <p className="text-[var(--color-text-secondary)] text-lg leading-relaxed max-w-2xl">
             {config?.description}
@@ -36,11 +36,7 @@ export default function About() {
             <h2 className="section-title">What Drives Us</h2>
           </ScrollReveal>
           <StaggerContainer className="grid md:grid-cols-3 gap-8">
-            {[
-              { title: 'Quality Without Compromise', body: 'Every project uses Grade-A materials sourced from verified vendors. We follow IS standards on all structural work.' },
-              { title: 'Client-Centric Approach', body: 'Your vision guides every decision. We maintain complete transparency on budgets, timelines, and challenges.' },
-              { title: 'Timely Delivery', body: 'We have delivered 95% of projects on or ahead of schedule — a record we protect fiercely.' },
-            ].map(({ title, body }, i) => (
+            {(config?.about?.values || []).map(({ title, body }, i) => (
               <ScrollReveal key={title} delay={i * 0.1} className="border-t-2 border-accent pt-6">
                 <h3 className="font-display text-xl font-semibold mb-3">{title}</h3>
                 <p className="text-sm text-[var(--color-text-secondary)] leading-relaxed">{body}</p>
