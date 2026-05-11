@@ -23,7 +23,7 @@ export const fallbackConfig = {
   ],
 
   whyUs: {
-    sectionLabel: 'Why QuadriBuilders',
+    sectionLabel: 'Why Quadri Builders',
     title: 'The Standard Others Are Measured Against',
     points: [
       {
