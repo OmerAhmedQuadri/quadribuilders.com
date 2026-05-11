@@ -20,3 +20,6 @@ Thumbs.db
 
 # pnpm
 .pnpm-store/
+
+# update on server side
+update.sh
