@@ -5,7 +5,7 @@ export const fallbackConfig = {
   tagline: 'Engineering Excellence. Architectural Vision.',
   description: 'Quadri Builders is a Hyderabad-based construction and real estate development firm with over two decades of experience delivering premium residential and commercial projects across Telangana.',
   phone: ['+91 84668 53364'],
-  email: ['omerquadri953@gmail.com'],
+  email: ['info@quadribuilders.com'],
   address: 'Quadri Builders, Hyderabad, Telangana, India',
 
   hero: {
