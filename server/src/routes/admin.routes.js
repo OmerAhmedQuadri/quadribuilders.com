@@ -1,16 +1,18 @@
 import { Router } from 'express';
 import jwt from 'jsonwebtoken';
-import rateLimit from 'express-rate-limit';
+// import rateLimit from 'express-rate-limit';
 
 const router = Router();
 
-const loginLimiter = rateLimit({
-  windowMs: 15 * 60 * 1000,
-  max: 10,
-  message: { message: 'Too many login attempts, try again later' },
-});
+// limiter off, same ip issue as index.js
+// no brute force protection on login now so ADMIN_PASSWORD has to be long + random
+// const loginLimiter = rateLimit({
+//   windowMs: 15 * 60 * 1000,
+//   max: 10,
+//   message: { message: 'Too many login attempts, try again later' },
+// });
 
-router.post('/login', loginLimiter, (req, res) => {
+router.post('/login', /* loginLimiter, */ (req, res) => {
   const { username, password } = req.body;
   if (
     username === process.env.ADMIN_USERNAME &&

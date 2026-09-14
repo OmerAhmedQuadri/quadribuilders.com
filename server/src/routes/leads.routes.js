@@ -1,5 +1,5 @@
 import { Router } from 'express';
-import rateLimit from 'express-rate-limit';
+// import rateLimit from 'express-rate-limit';
 import { z } from 'zod';
 import Lead from '../models/Lead.model.js';
 import auth from '../middleware/auth.middleware.js';
@@ -7,11 +7,13 @@ import { sendLeadEmail } from '../services/email.service.js';
 
 const router = Router();
 
-const leadLimiter = rateLimit({
-  windowMs: 60 * 60 * 1000,
-  max: 10,
-  message: { message: 'Too many submissions, please try again later' },
-});
+// limiter off, same ip issue as index.js
+// no spam protection on leads now and every lead fires a gmail email, keep an eye on it
+// const leadLimiter = rateLimit({
+//   windowMs: 60 * 60 * 1000,
+//   max: 10,
+//   message: { message: 'Too many submissions, please try again later' },
+// });
 
 const leadSchema = z.object({
   type: z.enum(['callback', 'enquiry', 'listed-property', 'unlisted-property', 'contract']),
@@ -29,7 +31,7 @@ const leadSchema = z.object({
   timeline: z.string().optional(),
 });
 
-router.post('/', leadLimiter, async (req, res) => {
+router.post('/', /* leadLimiter, */ async (req, res) => {
   const result = leadSchema.safeParse(req.body);
   if (!result.success) {
     return res.status(400).json({ message: 'Validation error', errors: result.error.flatten().fieldErrors });

@@ -16,9 +16,18 @@ const LABEL = {
   contract:            'Contract Development',
 };
 
+// Lead fields are user input — escape before interpolating into the email HTML
+const escapeHtml = (str) =>
+  String(str)
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#39;');
+
 const row = (label, value) =>
   value
-    ? `<tr><td style="padding:6px 12px;color:#888;width:160px;vertical-align:top">${label}</td><td style="padding:6px 12px;color:#f5f5f0">${value}</td></tr>`
+    ? `<tr><td style="padding:6px 12px;color:#888;width:160px;vertical-align:top">${label}</td><td style="padding:6px 12px;color:#f5f5f0">${escapeHtml(value)}</td></tr>`
     : '';
 
 export const sendLeadEmail = async (lead) => {
@@ -56,7 +65,7 @@ export const sendLeadEmail = async (lead) => {
       </div>
       <table style="width:100%;border-collapse:collapse">${rows}</table>
       <div style="padding:16px 24px;border-top:1px solid #222">
-        <a href="${process.env.ADMIN_URL || 'http://localhost:5000'}/admin/leads"
+        <a href="${process.env.APP_URL || 'http://localhost:5000'}/admin/leads"
            style="display:inline-block;background:#ffbd59;color:#0a0a0a;padding:10px 20px;border-radius:2px;text-decoration:none;font-size:13px;font-weight:600">
           View in Admin →
         </a>

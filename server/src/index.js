@@ -5,7 +5,7 @@ import { dirname, join } from 'path';
 import cors from 'cors';
 import helmet from 'helmet';
 import morgan from 'morgan';
-import rateLimit from 'express-rate-limit';
+// import rateLimit from 'express-rate-limit';
 import connectDB from './config/db.js';
 import configRoutes       from './routes/config.routes.js';
 import projectsRoutes     from './routes/projects.routes.js';
@@ -47,10 +47,13 @@ app.use(cors({
   credentials: true,
 }));
 
-const apiLimiter = rateLimit({ windowMs: 15 * 60 * 1000, max: 100, standardHeaders: true, legacyHeaders: false });
+// rate limiting commented out for now. behind nginx + cloudflare every visitor shows up as 127.0.0.1
+// so everyone shares one limit and the site starts throwing 429s after a few visitors.
+// to bring it back: app.set('trust proxy', 1) + cloudflare realip conf in nginx, then uncomment here + leads + admin routes
+// const apiLimiter = rateLimit({ windowMs: 15 * 60 * 1000, max: 100, standardHeaders: true, legacyHeaders: false });
 
 // ── API Routes ──────────────────────────────────────────────────
-app.use('/api',              apiLimiter);
+// app.use('/api',              apiLimiter);
 app.use('/api/config',       configRoutes);
 app.use('/api/projects',     projectsRoutes);
 app.use('/api/blog',         blogRoutes);
